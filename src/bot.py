@@ -16,6 +16,7 @@ dp = Dispatcher()
 dp.message.register(start_handler, CommandStart())
 dp.message.register(process_destination)
 dp.message.register(process_date)
+dp.message.register(process_duration)
 
 async def main():
     bot = Bot(token=BOT_TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
